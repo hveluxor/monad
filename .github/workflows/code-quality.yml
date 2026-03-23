@@ -10,7 +10,7 @@ concurrency:
 jobs:
   formatting-check:
     name: Check clang-format
-    runs-on: tenki-staging-standard-small-2c-4g
+    runs-on: tenki-standard-small-2c-4g
     steps:
       - uses: actions/checkout@v4
 
@@ -22,7 +22,7 @@ jobs:
 
   traits-check:
       name: Trait instantiation check
-      runs-on: tenki-staging-standard-small-2c-4g
+      runs-on: tenki-standard-small-2c-4g
       steps:
           - uses: actions/checkout@v4
             with:
@@ -39,7 +39,7 @@ jobs:
 
   clang-tidy:
     name: Check clang-tidy
-    runs-on: tenki-staging-standard-small-2c-4g
+    runs-on: tenki-standard-small-2c-4g
     steps:
         - name: Generate token
           id: generate_token
