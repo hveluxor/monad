@@ -3,7 +3,6 @@ name: Code Quality Checks
 on:
   push:
   workflow_dispatch:
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -11,7 +10,7 @@ concurrency:
 jobs:
   formatting-check:
     name: Check clang-format
-    runs-on: tenki-standard-large-plus-16c-32g
+    runs-on: tenki-staging-standard-small-2c-4g
     steps:
       - uses: actions/checkout@v4
 
@@ -23,7 +22,7 @@ jobs:
 
   traits-check:
       name: Trait instantiation check
-      runs-on: tenki-standard-large-plus-16c-32g
+      runs-on: tenki-staging-standard-small-2c-4g
       steps:
           - uses: actions/checkout@v4
             with:
@@ -40,7 +39,7 @@ jobs:
 
   clang-tidy:
     name: Check clang-tidy
-    runs-on: tenki-standard-large-plus-16c-32g
+    runs-on: tenki-staging-standard-small-2c-4g
     steps:
         - name: Generate token
           id: generate_token
