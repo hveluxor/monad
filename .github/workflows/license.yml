@@ -17,7 +17,7 @@ on:
 
 jobs:
   check-license:
-    runs-on: tenki-staging-standard-small-2c-4g
+    runs-on: tenki-standard-small-2c-4g
 
     steps:
       - name: Checkout repository
