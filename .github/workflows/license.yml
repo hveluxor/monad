@@ -11,13 +11,13 @@ on:
       - 'third_party/**'
   pull_request:
     branches: ["main"]
-    types: [ opened, synchronize, reopened, edited ]
+    types: [opened, synchronize, reopened, edited]
     paths-ignore:
       - 'third_party/**'
 
 jobs:
   check-license:
-    runs-on: tenki-standard-large-plus-16c-32g
+    runs-on: tenki-staging-standard-small-2c-4g
 
     steps:
       - name: Checkout repository

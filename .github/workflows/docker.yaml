@@ -2,7 +2,6 @@ name: Docker
 
 on:
   push:
-
 jobs:
   build:
     strategy:
@@ -10,7 +9,7 @@ jobs:
         CMAKE_BUILD_TYPE: [RelWithDebInfo, Debug]
         compiler: [{CXX: g++-15, CC: gcc-15}, {CXX: clang++-19, CC: clang-19}]
 
-    runs-on: tenki-standard-large-plus-16c-32g
+    runs-on: tenki-staging-standard-small-2c-4g
 
     steps:
       - name: Generate app token
